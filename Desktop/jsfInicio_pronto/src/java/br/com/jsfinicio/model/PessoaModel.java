@@ -8,16 +8,23 @@ package br.com.jsfinicio.model;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 /**
  *
- * @author Frank
+ * @author klaytonramires
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -38,6 +45,18 @@ public abstract class PessoaModel implements Serializable{
     private long cpf;
     @Column(nullable = false, length = 20)
     private String rg;
+    
+    @Column(nullable = true, length = 20)
+    private String login;
+    @Column(nullable = true, length = 10)
+    private String senha;
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="idEstado", insertable=true, updatable=true)
+    @Fetch(FetchMode.JOIN)
+    @Cascade(CascadeType.SAVE_UPDATE)
+    private EstadoModel estadoOrigem;
+
 
     public String getRg() {
         return rg;
@@ -86,5 +105,34 @@ public abstract class PessoaModel implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-    
+     public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+     public EstadoModel getEstadoOrigem() {
+        return estadoOrigem;
+    }
+
+    public void setEstadoOrigem(EstadoModel estadoOrigem) {
+        this.estadoOrigem = estadoOrigem;
+    }
+
+    public EstadoModel getEstado() {
+        return estadoOrigem;
+    }
+
+    public void setEstado(EstadoModel estadoOrigem) {
+        this.estadoOrigem = estadoOrigem;
+    }
 }
