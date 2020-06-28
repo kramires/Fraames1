@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/template.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="conteudo">
+        <div style="margin-bottom: 2%">
+            <h3>Editar de Disciplina</h3>
+        </div>
+        <h:form>
+            <h:inputHidden value="#{disciplinaController.disciplinaModel.idDisciplina}" />
+            <div class="form-row">
+                <div class="form-group col-md-9">
+                    <label for="nome">Nome</label>
+                    <h:inputText value="#{disciplinaController.disciplinaModel.nome}" class="form-control"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="cpf">Carga Horária Total</label>
+                    <h:inputText value="#{disciplinaController.disciplinaModel.cargaHorariaTotal}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="rg">Professor</label>
+                    <h:inputText value="#{disciplinaController.disciplinaModel.professor}" class="form-control"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="ra">Alunos</label>
+                    <h:inputText value="#{disciplinaController.disciplinaModel.listaDeAlunos}" class="form-control"/>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-6" onload="#{alunoController.buscarTodos()}">
+                    <label for="aluno">Lista de Alunos Matriculados</label>
+                    <h:selectOneMenu class="form-control" id="idEstado" value="#{disciplinaController.alunoModel.idPessoa}">
+                        <f:selectItems value="#{alunoController.listaDeAlunos}" var="aluno"
+                                       itemLabel="#{aluno.nome}" itemValue="#{aluno.idPessoa}" />
+                    </h:selectOneMenu>
+                </div>
+            </div>
+            </div>
+            <h:commandButton class="btn btn-primary" value="Salvar" action="#{disciplinaController.salvar()}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>

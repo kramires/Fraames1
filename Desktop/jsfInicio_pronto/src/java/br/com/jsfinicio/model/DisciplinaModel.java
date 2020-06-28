@@ -24,7 +24,7 @@ import org.hibernate.annotations.FetchMode;
 
 /**
  *
- * @author Frank
+ * @author klaytonramires
  */
 @Entity
 @Table(name = "disciplina")

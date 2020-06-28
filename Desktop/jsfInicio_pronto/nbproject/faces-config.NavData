@@ -2,14 +2,20 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="template/template.xhtml" x="916" y="39" zoom="true"/>
-        <Node id="views/aluno/cadastrarAluno.xhtml" x="167" y="8" zoom="true"/>
-        <Node id="index.xhtml" x="445" y="135" zoom="true"/>
-        <Node id="views/area/buscarArea.xhtml" x="801" y="132" zoom="true"/>
-        <Node id="views/professor/cadastrarProfessor.xhtml" x="560" y="271" zoom="true"/>
+        <Node id="views/aluno/cadastrarAluno.xhtml" x="137" y="-34" zoom="true"/>
+        <Node id="index.xhtml" x="448" y="50" zoom="true"/>
+        <Node id="views/disciplina/buscarDisciplina.xhtml" x="19" y="421" zoom="true"/>
+        <Node id="views/disciplina/editarDisciplina.xhtml" x="101" y="349" zoom="true"/>
+        <Node id="views/professor/cadastrarProfessor.xhtml" x="482" y="263" zoom="true"/>
+        <Node id="views/login.xhtml" x="722" y="50" zoom="true"/>
+        <Node id="views/aluno/editarAluno.xhtml" x="813" y="174" zoom="true"/>
+        <Node id="views/professor/buscarProfessor.xhtml" x="61" y="296" zoom="true"/>
+        <Node id="template/template.xhtml" x="902" y="-28" zoom="true"/>
+        <Node id="views/area/buscarArea.xhtml" x="848" y="110" zoom="true"/>
+        <Node id="views/disciplina/cadastrarDisciplina.xhtml" x="366" y="164" zoom="true"/>
+        <Node id="views/professor/editarProfessor.xhtml" x="866" y="267" zoom="false"/>
         <Node id="views/area/cadastrarArea.xhtml" x="3" y="133" zoom="true"/>
-        <Node id="views/aluno/buscarAluno.xhtml" x="542" y="10" zoom="true"/>
-        <Node id="views/professor/buscarProfessor.xhtml" x="100" y="302" zoom="true"/>
+        <Node id="views/aluno/buscarAluno.xhtml" x="564" y="-30" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

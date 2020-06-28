@@ -37,6 +37,10 @@ public class ProfessorController {
         this.listaDeProfessores = this.professorRepository.buscarTodos();
     }
     
+    public void excluir(){
+        
+    }
+    
     public ProfessorModel getProfessorModel() {
         return professorModel;
     }
