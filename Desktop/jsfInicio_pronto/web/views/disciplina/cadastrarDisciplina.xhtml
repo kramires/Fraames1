@@ -35,6 +35,16 @@ and open the template in the editor.
                         </ui:repeat>
                     </select>
                 </div>
+            <div class="form-group col-md-5  onload=#{areaController.buscar()}">
+                    <label for="area" >Área</label>
+                    <select id="idArea" name="area" class="form-control">
+                        <ui:repeat value="#{areaController.listaDeAreas}" var="area">
+                            <option value="#{disciplinaController.disciplinaModel.area}" class="form-control"> 
+                                ID: #{area.id} - #{area.descricao}
+                            </option>
+                        </ui:repeat>
+                    </select>
+                </div>
                  <div class="form-group col-md-9">
                     <label for="descricao">Professor</label>
                     <h:inputText value="#{disciplinaController.disciplinaModel.professor}" class="form-control"/>

@@ -47,11 +47,11 @@ Contributor(s):
     <property name="hibernate.connection.username">nbuser</property>
     <property name="hibernate.connection.password">nbuser</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping class="br.com.jsfinicio.model.PessoaModel"/>
     <mapping class="br.com.jsfinicio.model.AlunoModel"/>
     <mapping class="br.com.jsfinicio.model.AreaModel"/>
     <mapping class="br.com.jsfinicio.model.DisciplinaModel"/>
     <mapping class="br.com.jsfinicio.model.EstadoModel"/>
+    <mapping class="br.com.jsfinicio.model.PessoaModel"/>
     <mapping class="br.com.jsfinicio.model.ProfessorModel"/>
   </session-factory>
 </hibernate-configuration>

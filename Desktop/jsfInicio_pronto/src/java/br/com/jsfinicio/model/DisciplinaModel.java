@@ -5,6 +5,7 @@
  */
 package br.com.jsfinicio.model;
 
+import java.awt.geom.Area;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
@@ -36,6 +37,15 @@ public class DisciplinaModel implements Serializable {
 
     private String nome;
     private String cargaHorariaTotal;
+    private Area area;
+
+    public Area getArea() {
+        return area;
+    }
+
+    public void setArea(Area area) {
+        this.area = area;
+    }
 
     @ManyToMany
     @JoinTable(name = "disciplinas_alunos",

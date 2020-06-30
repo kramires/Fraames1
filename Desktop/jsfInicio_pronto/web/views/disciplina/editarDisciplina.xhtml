@@ -37,7 +37,7 @@ and open the template in the editor.
                     <h:inputText value="#{disciplinaController.disciplinaModel.listaDeAlunos}" class="form-control"/>
                 </div>
                 <div class="form-row">
-                <div class="form-group col-md-6" onload="#{alunoController.buscarTodos()}">
+                <div class="form-group col-md-6" onload="#{alunoController.buscar()}">
                     <label for="aluno">Lista de Alunos Matriculados</label>
                     <h:selectOneMenu class="form-control" id="idEstado" value="#{disciplinaController.alunoModel.idPessoa}">
                         <f:selectItems value="#{alunoController.listaDeAlunos}" var="aluno"
