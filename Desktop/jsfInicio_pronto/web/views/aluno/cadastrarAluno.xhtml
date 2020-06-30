@@ -37,7 +37,18 @@
                     <label for="email">E-Mail</label>
                     <h:inputText value="#{alunoController.alunoModel.email}" class="form-control"/>
                 </div>
+               <div class="form-group col-md-5  onload=#{estadoController.buscarTodos()}">
+                    <label for="area" >Estado</label>
+                    <select id="idArea" name="area" class="form-control">
+                        <ui:repeat value="#{estadoController.listaDeEstados}" var="estado">
+                            <option value="#{alunoController.alunoModel.email}" class="form-control"> 
+                                Id: #{estado.idEstado} - #{estado.nome}
+                            </option>
+                        </ui:repeat>
+                    </select>
+                </div>
             </div>
+            
             <h:commandButton class="btn btn-primary" value="Salvar" action="#{alunoController.salvar()}"/>
         </h:form>
     </ui:define>

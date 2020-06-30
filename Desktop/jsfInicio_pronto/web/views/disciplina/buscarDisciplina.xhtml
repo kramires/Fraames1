@@ -24,12 +24,11 @@ and open the template in the editor.
                 </tr>
             </thead>
             <tbody>
-                <ui:repeat value="#{disciplinaController.listaDedisciplinas}" var="disciplina">
+                <ui:repeat value="#{disciplinaController.listaDeDisciplinas}" var="disciplina">
                     <tr>
                         <td>#{disciplina.iddisciplina}</td>
                         <td>#{disciplina.nome}</td>
                         <td>#{disciplina.cargaHoraria}</td>
-                        <td>#{disciplina.descricao}</td>
                         <td>#{disciplina.listaDeAlunos}</td>
                         <td>#{disciplina.professor}</td>
                         <td>#{disciplina.area}</td>
