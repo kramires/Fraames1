@@ -8,12 +8,6 @@ package br.com.jsfinicio.util;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
 
-/**
- * Hibernate Utility class with a convenient method to get Session Factory
- * object.
- *
- * @author Frank
- */
 public class NewHibernateUtil {
 
     private static final SessionFactory sessionFactory;

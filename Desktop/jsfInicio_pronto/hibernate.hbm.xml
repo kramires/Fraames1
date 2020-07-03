@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
@@ -39,21 +38,13 @@ made subject to such option by the copyright holder.
 
 Contributor(s):
 -->
-<hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/jsfinicio</property>
-    <property name="hibernate.connection.username">nbuser</property>
-    <property name="hibernate.connection.password">nbuser</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping class="br.com.jsfinicio.model.AlunoModel"/>
-    <mapping class="br.com.jsfinicio.model.AreaModel"/>
-    <mapping class="br.com.jsfinicio.model.DisciplinaModel"/>
-    <mapping class="br.com.jsfinicio.model.EstadoModel"/>
-    <mapping class="br.com.jsfinicio.model.EstadoModel"/>
-    <mapping class="br.com.jsfinicio.model.PessoaModel"/>
-    <mapping class="br.com.jsfinicio.model.ProfessorModel"/>
-    <mapping resource="../../hibernate.hbm.xml"/>
-  </session-factory>
-</hibernate-configuration>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+
+</hibernate-mapping>

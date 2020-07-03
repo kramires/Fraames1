@@ -18,10 +18,7 @@ import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-/**
- *
- * @author Frank
- */
+
 @Entity
 @Table(name = "professor")
 @PrimaryKeyJoinColumn(name = "idpessoa")
